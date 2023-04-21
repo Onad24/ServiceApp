@@ -14,7 +14,7 @@ const Card = (props) => {
         backgroundColor: '#007AFF',
         borderRadius: 5,
         padding: 10,
-        marginTop: 4,
+        marginTop: 5,
       }}
     >
       <View style={styles.card}>
