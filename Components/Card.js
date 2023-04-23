@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  View,
+  SafeAreaView,
   Text,
   StyleSheet,
   Touchable,
@@ -15,12 +15,15 @@ const Card = (props) => {
         borderRadius: 5,
         padding: 10,
         marginTop: 4,
-      }}
-    >
-      <View style={styles.card}>
+      }
+    }
+    onPress={() => {
+      props.navigation.navigate('Root', {screen : 'Details'});
+    }}>
+      <SafeAreaView style={styles.card}>
         <Text style={styles.title}>{props.item.title}</Text>
         <Text style={styles.description}>{props.item.description}</Text>
-      </View>
+      </SafeAreaView>
     </TouchableOpacity>
   );
 };
